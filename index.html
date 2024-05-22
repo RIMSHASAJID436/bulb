@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 150px;
+            height: 40px;
+            background-color: rgb(132, 163, 219);
+            color: white;
+            border: none;
+            font-size: large;
+            font-family: serif;
+        }
+
+        .bulb {
+            text-align: center;
+        }
+
+        #img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bulb">
+        <img src="./off.png" alt="bulb" id="img">
+        <button type="button" id="btn" onclick="bulb()">Turn On</button>
+    </div>
+    <script>
+        function bulb(btn) {
+            var image = document.getElementById("img")
+            if (image.src.match("off.png")) {
+                image.src = "on.png";
+                document.getElementById("btn").innerText = "Turn Off"
+            } else {
+                var image = document.getElementById("img");
+                if (image.src.match("on.png")) {
+                    image.src = "off.png";
+                    document.getElementById("btn").innerText = "Turn On"
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
